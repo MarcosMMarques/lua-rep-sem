@@ -1,4 +1,3 @@
--- entrega.lua
 local Entrega = {}
 Entrega.__index = Entrega
 
@@ -26,12 +25,12 @@ function Entrega:setVeiculo(veiculo)
 	if accepted then
 		self.veiculo = veiculo
 	else
-		print("[LOG] Inválido, restrições da entrega incompatível com restrições do veículo")
+		print("Inválido, restrições da entrega incompatível com restrições do veículo")
 	end
 end
 
 function Entrega:calcularTempo()
-	print("[LOG] Iniciando cálculo de tempo para entrega...")
+	print("Iniciando cálculo de tempo para entrega...")
 	return self.veiculo:calcularTempoEstimado(self.endereco1, self.endereco2)
 end
 
